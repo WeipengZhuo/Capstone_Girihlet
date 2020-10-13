@@ -1,13 +1,6 @@
-from database import db
+from flask_sqlalchemy import SQLAlchemy
 
+db = SQLAlchemy()
 
-class Model(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-
-
-date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
-parameter = db.Column(db.Text, nullable=False)
-
-
-def __repr__(self):
-    return f"Model: {self.parameter}"
+def init_app(app):
+    db.init_app(app)
