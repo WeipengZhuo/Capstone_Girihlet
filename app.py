@@ -7,7 +7,7 @@ import commands
 app = Flask(__name__)
 # setup with the configuration provided by the user / environment
 app.config.from_object(os.environ['APP_SETTINGS'])
-
+# app.config.from_envvar('APP_SETTINGS')
 
 # setup all our dependencies, for now only database using application factory pattern
 database.init_app(app)
