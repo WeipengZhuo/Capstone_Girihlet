@@ -1,31 +1,24 @@
-from flask import Flask, render_template, request, redirect
-from alpha_vantage.timeseries import TimeSeries
-from bokeh.plotting import figure
-from bokeh.embed import components
+import os
+from flask import Flask, jsonify
+import database
+import commands
 
-#use python app.py to run NOT
+#init flask app instance
 app = Flask(__name__)
-app.vars = {}
+# setup with the configuration provided by the user / environment
+app.config.from_object(os.environ['APP_SETTINGS'])
 
-@app.route('/', methods= ['GET'])
-def index():
-    return render_template('/index.html')
+# setup all our dependencies, for now only database using application factory pattern
+database.init_app(app)
+commands.init_app(app)
 
-@app.route('/index',methods = ['POST'])
-def graph():
-    app.vars['ticker'] = request.form['stock_ticker']
-    script, div = make_plot()
-    return render_template('/graph.html', script=script, div=div)
+@app.route("/")
+def main_page():
+    return "Main Page"
 
+@app.route("/add/<string:item>", methods=['POST'])
+def add_new_item(item):
+    return jsonify({"sucess": item})
 
-def make_plot():
-    ts = TimeSeries(key='USYG6VWRKD3TEBF3', output_format='pandas')
-    data, meta_data = ts.get_daily(app.vars['ticker'])
-    plots = figure()
-    plots.line(data.index, data['4. close'])
-    script, div = components(plots)
-    return script, div
-
-
-if __name__ == '__main__':
-    app.run(port=8000, debug = 1)
+if __name__ == "__main__":
+    app.run()
