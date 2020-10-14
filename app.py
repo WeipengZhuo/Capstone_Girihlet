@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify, render_template
 import database
 import commands
-import config
+from config import DevelopmentConfig, ProductionConfig
 from model import Model
 
 # init flask app instance
@@ -10,14 +10,15 @@ app = Flask(__name__)
 # setup with the configuration provided by the user / environment
 # app.config.from_object(os.environ['APP_SETTINGS'])
 # app.config.from_envvar('APP_SETTINGS')
-app.config.from_object(config.DevelopmentConfig)
+
+app.config.from_object(ProductionConfig)
 
 # setup all our dependencies, for now only database using application factory pattern
 database.init_app(app)
 commands.init_app(app)
 
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def main_page():
     items = Model.query.all()
     return render_template('index2.html', items=items)
