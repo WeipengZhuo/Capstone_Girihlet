@@ -29,5 +29,27 @@ def main_page():
     # items = Model.query.all()
     return render_template('index.html')
 
+
+def count_composition(seq, bp):
+    counts = 0
+    for b in list(bp):
+        counts += seq.count(b)
+    return counts/len(seq)
+
+def Analysis(df):
+    df['lengths'] = df['sequence'].map(len)
+    letters = ['A', 'T', 'C', 'G', 'AT', 'CG']
+    for l in letters:
+        df[l] = df['sequence'].map(lambda x: count_composition(x, l))
+    return df
+
+def Plotting():
+    import pandas as pd
+
+    df = pd.read_csv('293T_2000ng_small_RNA_S25_R1_001')
+    df = Analysis(df)
+
+
+
 if __name__ == "__main__":
     app.run()
