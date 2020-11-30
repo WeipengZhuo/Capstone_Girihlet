@@ -88,7 +88,7 @@
               <i class="icon-layers m-auto text-primary"></i>
             </div>
             <h4>Big Data</h4>
-            <p class="lead mb-0">TB's of data per sample per person per timepoint</p>
+            <p class="lead mb-0">100s TBs of data per individual across time-points</p>
           </div>
         </div>
 
@@ -97,8 +97,8 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-settings m-auto text-primary"></i>
             </div>
-            <h4>Complex Processing</h4>
-            <p class="lead mb-0">Require generalized assumptions across samples</p>
+            <h4>Complex Pre-processing</h4>
+            <p class="lead mb-0">Raw data pre-processing requires complex and generalized assumptions across samples</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -118,7 +118,7 @@
   <section class="showcase bg-white text-center">
     <br>
     <br>
-    <h2 class="mb-6">Two part solution:</h2>
+    <h2 class="mb-6">Method:</h2>
     <br>
     <br>
     <div class="container-fluid p-0">
@@ -126,15 +126,17 @@
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/Pipeline_v1.png') }}');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h3>Part 1: Effective Distributed Pipeline</h3>
-          <p class="lead mb-0">Efficient and scalable pipeline via distributed cloud computing. Fully modular and tunable processing parameters.</p>
+          <h3>Effective Distributed Pipeline</h3>
+            <p class="lead mb-0">Efficient and scalable across distributed cloud platforms.</p>
+              <p class="lead mb-0">Fault tolerance due to redundant node partitioning.</p>
         </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/visv3.png') }}');"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h3>Part 2: Intuitive and Interactive Visualization</h3>
-          <p class="lead mb-0">Interactive dashboard for process parameter and results exploration. Giving complete control to users. </p>
+          <h3>Intuitive and Interactive Visualization</h3>
+            <p class="lead mb-0">Dashboard for parameter settings and results exploration.</p>
+            <p class="lead mb-0">Giving complete control to users. </p>
         </div>
       </div>
 
@@ -190,7 +192,7 @@
 
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+{#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">#}
             <h5>Sequence Source</h5>
             <!-- <p>Select a maintenance drone:</p> -->
             <br>
@@ -209,7 +211,7 @@
 
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+{#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">#}
             <h5>Pre-Processing Filters</h5>
             <br>
             <!-- <p>Length Filtering:</p> -->
@@ -247,7 +249,7 @@
 
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+{#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">#}
             <h5>Alignment Parameters</h5>
             <br>
             <p class="font-weight-light mb-0">Under Construction</p>
@@ -264,33 +266,32 @@
 
   <!-- Image Showcases -->
   <section class="showcase bg-white text-center">
-    <br>
-    <br>
-    <h2 class="mb-6">Two part solution:</h2>
-    <br>
-    <br>
+      <br>
+      <br>
+    <h2 class="mb-6">Visualization:</h2>
     <div class="container-fluid p-0">
 
       <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/Pipeline_v1.png') }}');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h3>Distributed process meta-data</h3>
-          <p class="lead mb-0">Efficient and scalable pipeline via distributed cloud computing. Fully modular and tunable processing parameters.</p>
+          <h3>Distributed process meta-data:</h3>
+          <p class="lead mb-0">Track process meta-data for optimization and issue diagnosis:</p>
         </div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/MetaData4.png') }}');"></div>
       </div>
+{#      <div class="row no-gutters">#}
+{#        <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/Pre_Proc.png') }}');"></div>#}
+{#        <div class="col-lg-6 my-auto showcase-text">#}
+{#          <h3>2. Process parametric analysis</h3>#}
+{#          <p class="lead mb-0">Explore the impact of each processing parameter on raw data:</p>#}
+{#        </div>#}
+{#      </div>#}
       <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/visv3.png') }}');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h3>Pre-process parameteric analysis</h3>
-          <p class="lead mb-0">Interactive dashboard for process parameter and results exploration. Giving complete control to users. </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/Pipeline_v1.png') }}');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h3>Pre-process result summary</h3>
-          <p class="lead mb-0">Efficient and scalable pipeline via distributed cloud computing. Fully modular and tunable processing parameters.</p>
-        </div>
+{#        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/ResultsSummary5.png') }}');"></div>#}
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h3>Process result summary:</h3>
+          <p class="lead mb-0">Interactive exploration of results:</p>
+              <div class='tableauPlaceholder' id='viz1606700791061' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='11292020_16066990633680&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606700791061');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          </div>
       </div>
 
     </div>
