@@ -118,15 +118,26 @@
   <section class="showcase bg-white text-center">
     <br>
     <br>
-    <h2 class="mb-6">Method:</h2>
+    <h2 class="mb-6">Objective:</h2>
+    <p class="lead mb-3">Develop a platform to not only be able to pre-process a huge amount (~TBs) of genomic data but also give complete control and visibility of underlying process parameters to the end-point users.</h3>
     <br>
+    <br>
+    <h2 class="mb-6">Main Methods:</h2>
     <br>
     <div class="container-fluid p-0">
       <div class="row no-gutters">
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/Pipeline_v1.png') }}');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h3>Effective Distributed Pipeline</h3>
+          <h3>1. Effective Distributed Pipeline</h3>
+            <br>
+
+            <h4><b>How it works:</b></h4>
+            <p class="lead mb-0"> Raw genomic data are partitioned and distributed across worker nodes which processes
+                independently and in parallel to extract only relevant sequences. These sequences are then aligned with
+                reference genomes in distributed databases</p>
+            <br>
+            <h4><b>Main benefits:</b></h4>
             <p class="lead mb-0">Efficient and scalable across distributed cloud platforms.</p>
               <p class="lead mb-0">Fault tolerance due to redundant node partitioning.</p>
         </div>
@@ -134,7 +145,13 @@
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/visv3.png') }}');"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h3>Intuitive and Interactive Visualization</h3>
+          <h3>2. Intuitive and Interactive Visualization</h3>
+
+            <h4><b>How it works:</b></h4>
+            <p class="lead mb-0"> Tableau Public is integrated with AWS Databricks to seamlessly feed analytic
+                parameters, results, and graphs to Heroku for display and interactive manipulation of all stages</p>
+            <br>
+            <h4><b>Main benefits:</b></h4>
             <p class="lead mb-0">Dashboard for parameter settings and results exploration.</p>
             <p class="lead mb-0">Giving complete control to users. </p>
         </div>
@@ -153,7 +170,9 @@
           <br>
           <br>
           <br>
-          <h3 class="mb-4 text-white">Login to connect to database and server:</h3>
+          <h3 class="mb-4 text-white">Mock-up of User Interface: </h3>
+            <p class="lead text-white mb-0">Goal is to connect to and upload relevant databases</p>
+            <br>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
@@ -186,14 +205,13 @@
   <section class="testimonials text-center bg-light">
     <div class="container">
 
-      <h2 class="mb-5">Configure process parameters</h2>
-
+      <h2 class="mb-5">Configure process parameters: Mock-up UI for setting analysis parameters</h2>
       <div class="row">
 
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
 {#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">#}
-            <h5>Sequence Source</h5>
+            <h5>Sequence Source: configure type of genetic sequence and which reference database to use</h5>
             <!-- <p>Select a maintenance drone:</p> -->
             <br>
               <div>
@@ -212,7 +230,7 @@
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
 {#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">#}
-            <h5>Pre-Processing Filters</h5>
+            <h5>Pre-Processing Filters: how to exclude irrelevant genomic sequences</h5>
             <br>
             <!-- <p>Length Filtering:</p> -->
               <div>
@@ -250,7 +268,7 @@
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
 {#            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">#}
-            <h5>Alignment Parameters</h5>
+            <h5>Alignment Parameters: how to align to reference genomes; fault tolerance etc...</h5>
             <br>
             <p class="font-weight-light mb-0">Under Construction</p>
           </div>
@@ -274,7 +292,14 @@
       <div class="row no-gutters">
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h3>Distributed process meta-data:</h3>
+            <br>
+            <h4>Objective:</h4>
+
           <p class="lead mb-0">Track process meta-data for optimization and issue diagnosis:</p>
+            <br>
+            <h4>Results:</h4>
+            <p class="lead mb-0"> This prototype used a small dataset with about 50x reduction in output size and 10x improvement
+                in speed using a single server </p>
         </div>
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/MetaData4.png') }}');"></div>
       </div>
@@ -289,9 +314,45 @@
 {#        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ url_for('static', filename='img/ResultsSummary5.png') }}');"></div>#}
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h3>Process result summary:</h3>
-          <p class="lead mb-0">Interactive exploration of results:</p>
-              <div class='tableauPlaceholder' id='viz1606700791061' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='11292020_16066990633680&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606700791061');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+              <br>
+              <h4>Results 1:</h4>
+                <p class="lead mb-0"> Pre-processed sequences shows binomial distribution in total sequence length
+                    which may indicate a bi-stabilizing length zones. This may be of interest to end-users</p>
+                            <br>
+              <h4>Results 2:</h4>
+                <p class="lead mb-0"> Pre-processed sequences shows normally distributed base-pair nucleotide ratio which is to be expected.
+                    However, the mean of the distribution is much higher than 0.5, which indicates A-T pairs are dominant in the pool of desired sequences.
+                    This should be interesting to investigate further to see why there is a biological bias in nucleotides used for these set of genes</p>
           </div>
+      </div>
+          <div class='tableauPlaceholder' id='viz1606700791061' style='position: relative'>
+              <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript>
+              <object class='tableauViz'  style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='11292020_16066990633680&#47;Dashboard1' />
+                  <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;11292020_16066990633680&#47;Dashboard1&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en' />
+                  <param name='filter' value='publish=yes' />
+              </object>
+          </div>
+          <script type='text/javascript'>
+              var divElement = document.getElementById('viz1606700791061');
+              var vizElement = divElement.getElementsByTagName('object')[0];
+              if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';}
+              else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';}
+              else { vizElement.style.width='100%';vizElement.style.height='727px';}
+              var scriptElement = document.createElement('script');
+              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+              vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
       </div>
 
     </div>
